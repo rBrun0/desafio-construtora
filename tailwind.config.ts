@@ -8,11 +8,37 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        customGray: "#323538",
+        mostard: "#BC9C57",
       },
+      keyframes: {
+        spinUp: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(70%)" },
+        },
+        spinDown: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(-75%)" },
+        },
+        marqueeLeft: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        marqueeRight: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        spinUp: "spinUp 950s linear infinite",
+        spinDown: "spinDown 950s linear infinite",
+        marqueeLeft: "marqueeLeft 200s linear infinite",
+        marqueeRight: "marqueeRight 200s linear infinite",
+      },
+      fontFamily: {
+        'Raleway': ["Raleway", "sans-serif"]
+      }
     },
   },
   plugins: [],
