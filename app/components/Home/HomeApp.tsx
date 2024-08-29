@@ -9,13 +9,13 @@ export const HomeApp = () => {
         <div className="w-full min-h-screen max-h-screen overflow-hidden relative flex flex-col justify-between">
             <Header/>
 
-            <main className="flex flex-col items-center justify-center w-[29rem] sm:w-[29rem] md:w-[37rem] h-[9rem] mx-auto z-10">
+            <main className="flex flex-col items-center justify-center w-[29rem] sm:w-[29rem] md:w-[37rem] h-[9rem] mx-auto z-10 space-y-2">
                 <Image src={mainLogo} width={164} height={133} alt="logo-site" className="-translate-y-11 "/>
-                <h1 className="text-white font-light text-3xl md:text-5xl text-center">
+                <h1 className="text-white font-light text-3xl md:text-5xl text-center max-w-[95%]">
                     VIVA O <span className="bg-[#EDCF75] font-semibold">HOJE</span> COM SEGURANCA DO SEU PATRIMONIO
                 </h1>
                 <p className="text-white text-xs md:text-base font-normal">Apartamentos com 120 a 150m2 a 150m2 no Pereque, Porto Belo</p>
-                <button className="bg-transparent border-2 border-white rounded-xl text-white w-36 h-9">
+                <button className="bg-transparent border-2 border-white rounded-xl text-white w-36 h-16">
                     EXPLORE
                 </button>
             </main>

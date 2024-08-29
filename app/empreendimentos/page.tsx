@@ -16,7 +16,7 @@ export default function empreendimentos() {
         <div className="relative">
         <h1 className="absolute text-customGray font-bold text-9xl opacity-5 left-10 top-5 md:-top-12 "
         style={{textShadow: '-2px -2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff, 2px 0 0 #fff'}}>PRE <br /> LANCAMENTO</h1>
-        <h1 className="text-white text-6xl font-bold md:mt-36 md:ml-36 translate-x-16 translate-y-12 md:translate-x-0 md:translate-y-0"
+        <h1 className="text-white text-6xl font-bold md:mt-36 md:ml-36 translate-x-8 translate-y-12 md:translate-x-0 md:translate-y-0"
         >PRE <br /> <span className="text-mostard">LANCAMENTO</span>
         </h1>
         </div>
@@ -37,7 +37,7 @@ export default function empreendimentos() {
         <div className="relative">
         <h1 className="absolute text-customGray font-bold text-9xl opacity-5 left-10 top-12 md:-top-12  "
         style={{textShadow: '-2px -2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff, 2px 0 0 #fff'}}>EM <br /> CONSTRUCAO</h1>
-        <h1 className="text-white text-6xl font-bold md:mt-36 md:ml-36 translate-x-20 translate-y-32 md:translate-x-0 md:translate-y-0 ">
+        <h1 className="text-white text-6xl font-bold md:mt-36 md:ml-36 translate-x-8 translate-y-32 md:translate-x-0 md:translate-y-0 ">
             EM <br /> <span className="text-mostard">CONSTRUCAO</span></h1>
         </div>
 

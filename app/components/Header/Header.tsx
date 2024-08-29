@@ -23,7 +23,7 @@ export const Header = () => {
     return (
         <header className="flex justify-between items-center max-w-full h-20 pt-6 mx-8 z-[999]">
             <Link href={'/'}>
-                <Image src={headerLogo} height={76} width={109} alt="header-logo" className="cursor-pointer"/>
+                <Image src={headerLogo} height={76} width={109} alt="header-logo" className="cursor-pointer z-[100]"/>
             </Link>
 
             <nav className="hidden sm:hidden md:flex justify-center items-center space-x-10 text-white text-xs lg:text-sm font-bold ">
@@ -49,7 +49,7 @@ export const Header = () => {
                 </span>
             </nav> 
 
-            <nav className="hidden sm:hidden lg:flex justify-center items-center space-x-3">
+            <nav className="hidden sm:hidden lg:flex justify-center items-center space-x-3 z-50">
                 <a href="#" className="text-white hover:text-mostard transition-colors text-3xl"> 
                     <FaWhatsapp />
                 </a>

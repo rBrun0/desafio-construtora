@@ -15,9 +15,9 @@ export const Footer = () => {
                 <FaYoutube className="cursor-pointer hover:text-white transition-colors"/>
             </div>
 
-            <div className="relative w-full min-h-[35rem] pt-28 px-40 flex flex-col md:flex-row items-start justify-start space-y-8 md:space-y-0 space-x-12">
+            <div className="relative w-full min-h-[35rem] pt-28 px-40 flex flex-col md:flex-row items-start md:items-start  justify-start space-y-8 md:space-y-0 space-x-12">
 
-            <div className="relative flexflex-col justify-center items-start space-y-4">
+        <div className="relative flex flex-col justify-center items-start space-y-4">
             <span className="absolute -top-2 left-0 w-20 h-2 bg-[#EDCF75]"/>
             <h1 className="font-bold text-3xl">EMPREENDIMENTOS</h1>
             <p className="text-xl font-light pt-3">Sun Beach Residence</p>
@@ -46,7 +46,7 @@ export const Footer = () => {
             <div className="text-mostard flex items-center justify-between px-32 py-11">
                 <p>GD&JR@2023</p>
                 <Image src={footerIcon} width={54} height={50} alt="imagem" className="translate-x-[50%]"/>
-                <p className="flex items-center justify-center hidden md:block">
+                <p className="items-center justify-center hidden md:flex">
                     DESENVOLVIDO POR
                 <Image src={circleIcon} width={31} height={31} alt="imagem" className="bg-mostard rounded-full p-1"/>
                 </p>

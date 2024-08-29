@@ -1,10 +1,7 @@
 import Image from "next/image"
 import employee1 from '../../../public/employee1.jpg'
 import employee2 from '../../../public/employee2.jpg'
-import employee3 from '../../../public/employee3.jpg'
-import { Swiper, SwiperSlide } from "swiper/react"
-
-import 'swiper/css'
+import employee3 from '../../../public/employee3.jpg' 
 
 
 export const TeamCarouselSlider = () => {
