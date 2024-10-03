@@ -17,7 +17,7 @@ export const FaleConosco = ({isModalOpen, setIsModalOpen}: ModalProps) => {
 
     return (
 
-        <section className={`absolute left-0 ${isModalOpen ? 'top-0 h-full' : '-top-[600px] h-0'} hidden md:block w-full transition-all z-10`}>
+        <section className={`absolute left-0 ${isModalOpen ? 'top-0 h-full' : '-top-[600px] h-0'} hidden md:block w-full transition-all z-50`}>
 
             <div className="flex justify-end bg-customGray pr-8 pt-5 text-white cursor-pointer">
                 <IoCloseCircleOutline className="w-14 h-14" onClick={closeModal}/>
