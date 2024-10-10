@@ -10,11 +10,13 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import Link from "next/link";
 import { FaleConosco } from "./components/FaleConosco";
 import { useState } from "react";
+import { HamburguerContent } from "./components/HamburguerContent";
 
 
 export const Header = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isHamburguerOpened, setIsHamburguerOpened] = useState(false)
 
     function openModal() {
         setIsModalOpen(true)
@@ -66,7 +68,9 @@ export const Header = () => {
 
             {/* hamburguer */}
 
-            <RxHamburgerMenu className="block md:hidden text-white w-12 h-12 cursor-pointer"/>
+            <RxHamburgerMenu className="block md:hidden text-white w-12 h-12 cursor-pointer" onClick={() => setIsHamburguerOpened(!isHamburguerOpened)}/>
+
+            <HamburguerContent isHamburguerOpened={isHamburguerOpened} setIsHamburguerOpened={setIsHamburguerOpened}/>
 
 
             {/* modal fale conosco */}

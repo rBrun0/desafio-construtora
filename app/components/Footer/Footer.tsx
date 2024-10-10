@@ -15,7 +15,7 @@ export const Footer = () => {
                 <FaYoutube className="cursor-pointer hover:text-white transition-colors"/>
             </div>
 
-            <div className="relative w-full min-h-[35rem] pt-28 px-40 flex flex-col md:flex-row items-start md:items-start  justify-start space-y-8 md:space-y-0 space-x-12">
+            <div className="relative w-full min-h-[35rem] pt-28 px-28 flex flex-col md:flex-row items-start md:items-start  justify-start gap-16">
 
         <div className="relative flex flex-col justify-center items-start space-y-4">
             <span className="absolute -top-2 left-0 w-20 h-2 bg-[#EDCF75]"/>
