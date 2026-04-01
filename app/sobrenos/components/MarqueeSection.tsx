@@ -1,39 +1,53 @@
-import { MutableRequestCookiesAdapter } from "next/dist/server/web/spec-extension/adapters/request-cookies"
-
 export const MarqueeSection = () => {
-    return (
-        <section className="flex flex-col space-y-24 w-full h-96 overflow-hidden bg-customGray">
+  const marqueeItems = [
+    {
+      text: "QUALIDADE EM",
+      highlight: "TODOS OS DETALHES",
+      minW: "min-w-[700px]",
+    },
+    { text: "POS VENDA", highlight: "ATIVO", minW: "min-w-[400px]" },
+    {
+      text: "COMPRA SEGURA",
+      highlight: "EM TODO O PROCESSO",
+      minW: "min-w-[700px]",
+    },
+  ];
 
-            {/* primeiro marquee */}
-            <div className=" w-full flex space-x-7 text-white text-6xl font-bold animate-marqueeLeft">
-                <span className="min-w-[700px]">QUALIDADE EM <br /> <span className="text-mostard">TODOS OS DETALHES</span></span>
-                <span className="min-w-[400px]">POS VENDA <br /> <span className="text-mostard">ATIVO</span></span>
-                <span className="min-w-[700px]">COMPRA SEGURA <br /><span className="text-mostard">EM TODO O PROCESSO</span></span>
-                <span className="min-w-[700px]">QUALIDADE EM <br /> <span className="text-mostard">TODOS OS DETALHES</span></span>
-                <span className="min-w-[400px]">POS VENDA <br /> <span className="text-mostard">ATIVO</span></span>
-                <span className="min-w-[700px]">COMPRA SEGURA <br /><span className="text-mostard">EM TODO O PROCESSO</span></span>
-                <span className="min-w-[700px]">QUALIDADE EM <br /> <span className="text-mostard">TODOS OS DETALHES</span></span>
-                <span className="min-w-[400px]">POS VENDA <br /> <span className="text-mostard">ATIVO</span></span>
-                <span className="min-w-[700px]">COMPRA SEGURA <br /><span className="text-mostard">EM TODO O PROCESSO</span></span>
+  return (
+    <section className="flex flex-col space-y-12 sm:space-y-24 w-full h-60 sm:h-96 overflow-hidden bg-customGray">
+      {/* primeiro marquee - left */}
+      <div className="w-full flex animate-marqueeLeft">
+        {[...Array(2)].map((_, setIndex) => (
+          <div key={setIndex} className="flex shrink-0 space-x-7">
+            {marqueeItems.map((item, i) => (
+              <span
+                key={`${setIndex}-${i}`}
+                className={`${item.minW} text-white text-2xl sm:text-4xl md:text-6xl font-bold shrink-0 px-4`}
+              >
+                {item.text} <br />{" "}
+                <span className="text-mostard">{item.highlight}</span>
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
 
-               
-            </div>
-
-            {/* segundo marquee */}
-
-            <div className=" w-full flex space-x-7 text-white text-6xl font-bold animate-marqueeRight">
-
-                <span className="min-w-[400px]">POS VENDA <br /> <span className="text-mostard">ATIVO</span></span>
-                <span className="min-w-[700px]">QUALIDADE EM <br /> <span className="text-mostard">TODOS OS DETALHES</span></span>
-                <span className="min-w-[700px]">COMPRA SEGURA <br /><span className="text-mostard">EM TODO O PROCESSO</span></span>
-                <span className="min-w-[400px]">POS VENDA <br /> <span className="text-mostard">ATIVO</span></span>
-                <span className="min-w-[700px]">QUALIDADE EM <br /> <span className="text-mostard">TODOS OS DETALHES</span></span>
-                <span className="min-w-[700px]">COMPRA SEGURA <br /><span className="text-mostard">EM TODO O PROCESSO</span></span>
-                <span className="min-w-[400px]">POS VENDA <br /> <span className="text-mostard">ATIVO</span></span>
-                <span className="min-w-[700px]">QUALIDADE EM <br /> <span className="text-mostard">TODOS OS DETALHES</span></span>
-                <span className="min-w-[700px]">COMPRA SEGURA <br /><span className="text-mostard">EM TODO O PROCESSO</span></span>
-               
-            </div>
-        </section>
-    )
-}
+      {/* segundo marquee - right */}
+      <div className="w-full flex animate-marqueeRight">
+        {[...Array(2)].map((_, setIndex) => (
+          <div key={setIndex} className="flex shrink-0 space-x-7">
+            {[...marqueeItems].reverse().map((item, i) => (
+              <span
+                key={`${setIndex}-${i}`}
+                className={`${item.minW} text-white text-2xl sm:text-4xl md:text-6xl font-bold shrink-0 px-4`}
+              >
+                {item.text} <br />{" "}
+                <span className="text-mostard">{item.highlight}</span>
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};

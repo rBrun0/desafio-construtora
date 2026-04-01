@@ -9,9 +9,9 @@ import { FaYoutube } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Link from "next/link";
 import { FaleConosco } from "./components/FaleConosco";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HamburguerContent } from "./components/HamburguerContent";
-import { motion } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const navItemVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -43,6 +43,13 @@ const socialIconVariants = {
 export const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isHamburguerOpened, setIsHamburguerOpened] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 50);
+  });
 
   function openModal() {
     setIsModalOpen(true);
@@ -63,7 +70,18 @@ export const Header = () => {
   ];
 
   return (
-    <header className="flex justify-between items-center max-w-full h-20 pt-6 mx-8 z-[999]">
+    <motion.header
+      className="flex justify-between items-center max-w-full h-16 sm:h-20 px-4 sm:px-8 z-[999] fixed top-0 left-0 right-0"
+      initial={false}
+      animate={{
+        backgroundColor: scrolled ? "rgba(0, 0, 0, 0.85)" : "rgba(0, 0, 0, 0)",
+        backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
+        boxShadow: scrolled
+          ? "0 4px 30px rgba(0, 0, 0, 0.3)"
+          : "0 0px 0px rgba(0, 0, 0, 0)",
+      }}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+    >
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
@@ -75,7 +93,7 @@ export const Header = () => {
             height={76}
             width={109}
             alt="header-logo"
-            className="cursor-pointer z-[100]"
+            className="cursor-pointer z-[100] w-[70px] h-[50px] sm:w-[109px] sm:h-[76px]"
           />
         </Link>
       </motion.div>
@@ -138,7 +156,7 @@ export const Header = () => {
         className="block md:hidden"
       >
         <RxHamburgerMenu
-          className="text-white w-12 h-12 cursor-pointer"
+          className="text-white w-8 h-8 sm:w-12 sm:h-12 cursor-pointer"
           onClick={() => setIsHamburguerOpened(!isHamburguerOpened)}
         />
       </motion.div>
@@ -151,6 +169,6 @@ export const Header = () => {
       {/* modal fale conosco */}
 
       <FaleConosco isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-    </header>
+    </motion.header>
   );
 };

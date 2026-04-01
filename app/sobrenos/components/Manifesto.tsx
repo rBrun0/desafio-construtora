@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export const Manifesto = () => {
   return (
-    <section className="w-full flex flex-col justify-center items-center bg-customGray mt-56">
+    <section className="w-full flex flex-col justify-center items-center bg-customGray mt-24 sm:mt-56">
       <motion.h1
-        className="text-3xl md:text-6xl text-center text-white font-extrabold tracking-tight"
+        className="text-2xl sm:text-3xl md:text-6xl text-center text-white font-extrabold tracking-tight px-4"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -16,7 +16,7 @@ export const Manifesto = () => {
       </motion.h1>
 
       <motion.p
-        className="m-auto w-9/12 text-center text-white text-3xl md:text-6xl font-thin pb-64"
+        className="m-auto w-11/12 sm:w-9/12 text-center text-white text-xl sm:text-3xl md:text-6xl font-thin pb-32 sm:pb-64 px-4"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}

@@ -54,7 +54,7 @@ export default function empreendimentos() {
 
       <div className="relative">
         <h1
-          className="absolute text-customGray font-bold text-9xl opacity-5 left-10 top-5 md:-top-12 "
+          className="absolute text-customGray font-bold text-5xl sm:text-7xl md:text-9xl opacity-5 left-4 sm:left-10 top-5 md:-top-12 "
           style={{
             textShadow:
               "-2px -2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff, 2px 0 0 #fff",
@@ -63,7 +63,7 @@ export default function empreendimentos() {
           PRE <br /> LANCAMENTO
         </h1>
         <motion.h1
-          className="text-white text-6xl font-bold md:mt-36 md:ml-36 translate-x-8 translate-y-12 md:translate-x-0 md:translate-y-0"
+          className="text-white text-3xl sm:text-4xl md:text-6xl font-bold mt-20 ml-4 sm:mt-24 sm:ml-10 md:mt-36 md:ml-36"
           variants={sectionTitleVariants}
           initial="hidden"
           whileInView="visible"
@@ -74,7 +74,7 @@ export default function empreendimentos() {
       </div>
 
       <motion.section
-        className="flex flex-col lg:flex-row justify-around items-center space-y-20 lg:space-y-0 mt-40 md:mt-52 lg:mt-72 bg-customGray"
+        className="flex flex-col lg:flex-row justify-around items-center space-y-20 lg:space-y-0 mt-24 sm:mt-40 md:mt-52 lg:mt-72 bg-customGray px-4 sm:px-8 lg:px-0"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -89,7 +89,7 @@ export default function empreendimentos() {
       </motion.section>
 
       <motion.div
-        className="bg-customGray w-full h-16 px-16 pt-24 flex justify-start items-center space-x-16"
+        className="bg-customGray w-full h-16 px-6 sm:px-16 pt-24 flex justify-start items-center space-x-8 sm:space-x-16"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -101,6 +101,7 @@ export default function empreendimentos() {
             width={114}
             height={50}
             alt="seta-esquerda"
+            className="w-[70px] sm:w-[114px]"
           />
         </motion.div>
         <motion.div whileHover={{ x: 10 }} transition={{ duration: 0.2 }}>
@@ -109,6 +110,7 @@ export default function empreendimentos() {
             width={114}
             height={50}
             alt="seta-esquerda"
+            className="w-[70px] sm:w-[114px]"
           />
         </motion.div>
       </motion.div>
@@ -117,7 +119,7 @@ export default function empreendimentos() {
 
       <div className="relative">
         <h1
-          className="absolute text-customGray font-bold text-9xl opacity-5 left-10 top-12 md:-top-12  "
+          className="absolute text-customGray font-bold text-5xl sm:text-7xl md:text-9xl opacity-5 left-4 sm:left-10 top-12 md:-top-12  "
           style={{
             textShadow:
               "-2px -2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff, 2px 0 0 #fff",
@@ -126,7 +128,7 @@ export default function empreendimentos() {
           EM <br /> CONSTRUCAO
         </h1>
         <motion.h1
-          className="text-white text-6xl font-bold md:mt-36 md:ml-36 translate-x-8 translate-y-32 md:translate-x-0 md:translate-y-0 "
+          className="text-white text-3xl sm:text-4xl md:text-6xl font-bold mt-20 ml-4 sm:mt-24 sm:ml-10 md:mt-36 md:ml-36"
           variants={sectionTitleVariants}
           initial="hidden"
           whileInView="visible"
@@ -137,7 +139,7 @@ export default function empreendimentos() {
       </div>
 
       <motion.section
-        className="flex flex-col md:flex-row justify-around items-center mt-72 bg-customGray"
+        className="flex flex-col md:flex-row justify-around items-center mt-24 sm:mt-40 md:mt-72 bg-customGray px-4 sm:px-8 md:px-0"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -152,7 +154,7 @@ export default function empreendimentos() {
       </motion.section>
 
       <motion.div
-        className="bg-customGray w-full h-16 px-16 pt-24 flex justify-start items-center space-x-16"
+        className="bg-customGray w-full h-16 px-6 sm:px-16 pt-24 flex justify-start items-center space-x-8 sm:space-x-16"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -164,6 +166,7 @@ export default function empreendimentos() {
             width={114}
             height={50}
             alt="seta-esquerda"
+            className="w-[70px] sm:w-[114px]"
           />
         </motion.div>
         <motion.div whileHover={{ x: 10 }} transition={{ duration: 0.2 }}>
@@ -172,16 +175,17 @@ export default function empreendimentos() {
             width={114}
             height={50}
             alt="seta-esquerda"
+            className="w-[70px] sm:w-[114px]"
           />
         </motion.div>
       </motion.div>
 
-      <section className="w-full h-[32rem] flex flex-col items-center justify-center space-y-4 relative mt-32">
+      <section className="w-full h-[24rem] sm:h-[32rem] flex flex-col items-center justify-center space-y-4 relative mt-16 sm:mt-32 px-4">
         <Image
           src={officeImage}
           alt="imagem-fundo-escritorio"
           fill
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
           className="opacity-10 "
         />
 
@@ -208,7 +212,7 @@ export default function empreendimentos() {
         </motion.button>
       </section>
 
-      <section className="w-full min-h-[26rem] bg-mostard flex flex-col md:flex-row  items-center justify-around">
+      <section className="w-full min-h-[26rem] bg-mostard flex flex-col md:flex-row items-center justify-around py-12 md:py-0 px-6 md:px-0 gap-8 md:gap-0">
         <motion.h1
           className="text-2xl md:text-4xl lg:text-6xl text-center text-white font-bold tracking-tighter"
           initial={{ opacity: 0, x: -40 }}

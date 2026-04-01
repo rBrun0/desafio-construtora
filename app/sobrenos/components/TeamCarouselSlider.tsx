@@ -28,11 +28,11 @@ const teamMembers = [
 
 export const TeamCarouselSlider = () => {
   return (
-    <section className="min-w-full h-[43rem] bg-mostard flex justify-center items-center space-x-4 z-20 overflow-hidden">
+    <section className="min-w-full min-h-[28rem] sm:h-[43rem] bg-mostard flex flex-col sm:flex-row justify-center items-center gap-4 py-8 sm:py-0 z-20 overflow-hidden">
       {teamMembers.map((member, i) => (
         <motion.div
           key={member.name}
-          className="relative h-[45rem] min-w-[23rem] w-[29rem] -translate-y-11 group cursor-pointer"
+          className="relative h-[20rem] w-[85%] sm:h-[45rem] sm:min-w-[14rem] sm:w-[29rem] sm:-translate-y-11 group cursor-pointer"
           custom={i}
           variants={cardVariants}
           initial="hidden"
@@ -43,19 +43,19 @@ export const TeamCarouselSlider = () => {
           <Image
             src={member.image}
             fill
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
             alt="imagem-funcionario"
           />
           <h1
-            className="absolute top-[70%] -left-[27%] text-4xl font-thin text-white opacity-75 -rotate-90 translate-y-0 
+            className="absolute top-[70%] -left-[27%] text-xl sm:text-4xl font-thin text-white opacity-75 -rotate-90 translate-y-0 
                     group-hover:-translate-y-24 ease-in-out group-hover:opacity-0 transition-all"
           >
             {member.role}
           </h1>
-          <h1 className="absolute top-[90%] left-[14%] text-4xl font-bold text-white opacity-100 group-hover:opacity-0 transition-opacity">
+          <h1 className="absolute top-[85%] sm:top-[90%] left-[14%] text-2xl sm:text-4xl font-bold text-white opacity-100 group-hover:opacity-0 transition-opacity">
             {member.name}
           </h1>
-          <h1 className="absolute -bottom-[6%] left-[50%] -translate-x-[50%] text-8xl font-bold text-white hidden group-hover:block transition-all">
+          <h1 className="absolute -bottom-[6%] left-[50%] -translate-x-[50%] text-4xl sm:text-8xl font-bold text-white hidden group-hover:block transition-all">
             {member.name}
           </h1>
         </motion.div>

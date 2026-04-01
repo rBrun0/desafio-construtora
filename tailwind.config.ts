@@ -22,23 +22,23 @@ const config: Config = {
           "100%": { transform: "translateY(-75%)" },
         },
         marqueeLeft: {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(100%)" },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
         marqueeRight: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" },
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
       animation: {
         spinUp: "spinUp 950s linear infinite",
         spinDown: "spinDown 950s linear infinite",
-        marqueeLeft: "marqueeLeft 200s linear infinite",
-        marqueeRight: "marqueeRight 200s linear infinite",
+        marqueeLeft: "marqueeLeft 30s linear infinite",
+        marqueeRight: "marqueeRight 30s linear infinite",
       },
       fontFamily: {
-        'Raleway': ["Raleway", "sans-serif"]
-      }
+        Raleway: ["Raleway", "sans-serif"],
+      },
     },
   },
   plugins: [],

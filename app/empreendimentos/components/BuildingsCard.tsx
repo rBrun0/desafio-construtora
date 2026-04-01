@@ -25,47 +25,55 @@ const detailVariants = {
 
 export const BuildingsCard = () => {
   return (
-    <div className="flex flex-col justify-center items-start space-y-24">
+    <div className="flex flex-col justify-center items-start space-y-12 sm:space-y-24 w-full">
       <Image
         src={beachLogo}
         alt="beach-logo"
-        className="hidden md:block w-[165px] h-[133px]"
+        className="hidden md:block w-[120px] h-[96px] lg:w-[165px] lg:h-[133px]"
       />
-      <div className="md:w-[41rem] md:h-[34rem] bg-black flex justify-between">
-        <div className="h-full text-white flex flex-col justify-center items-start pl-12 space-y-10">
+      <div className="w-full sm:w-[32rem] md:w-[41rem] h-auto sm:h-[28rem] md:h-[34rem] bg-black flex flex-col sm:flex-row justify-between overflow-visible">
+        <div className="h-full text-white flex flex-col justify-center items-start pl-6 sm:pl-8 md:pl-12 space-y-6 sm:space-y-10 py-8 sm:py-0">
           <motion.span
-            className="text-xl"
+            className="text-sm sm:text-base md:text-xl"
             custom={0}
             variants={detailVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <Image src={areaIcon} width={40} height={40} alt="icone" /> 120 a
-            150m2
+            <Image
+              src={areaIcon}
+              width={40}
+              height={40}
+              alt="icone"
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
+            />{" "}
+            120 a 150m2
           </motion.span>
           <motion.span
-            className="text-xl flex flex-col"
+            className="text-sm sm:text-base md:text-xl flex flex-col"
             custom={1}
             variants={detailVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <MdBed className=" w-10 h-10 text-mostard" /> 2 ou 3 suites
+            <MdBed className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-mostard" />{" "}
+            2 ou 3 suites
           </motion.span>
           <motion.span
-            className="text-xl flex flex-col"
+            className="text-sm sm:text-base md:text-xl flex flex-col"
             custom={2}
             variants={detailVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <FaCarRear className=" w-10 h-10 text-mostard" /> 2 ou 3 vagas
+            <FaCarRear className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-mostard" />{" "}
+            2 ou 3 vagas
           </motion.span>
           <motion.span
-            className="text-xl flex flex-col"
+            className="text-sm sm:text-base md:text-xl flex flex-col"
             custom={3}
             variants={detailVariants}
             initial="hidden"
@@ -73,15 +81,16 @@ export const BuildingsCard = () => {
             viewport={{ once: true }}
           >
             {" "}
-            <FaLocationDot className=" w-10 h-10 text-mostard" /> Rua Manoel da{" "}
-            <br /> Silva Pereira <br /> Pereque <br /> Porto Belo/SC
+            <FaLocationDot className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-mostard" />{" "}
+            Rua Manoel da <br /> Silva Pereira <br /> Pereque <br /> Porto
+            Belo/SC
           </motion.span>
         </div>
 
         <motion.div
-          className="h-[18] w-[13rem] md:w-[20rem] md:h-[37rem] lg:w-[26rem] lg:h-[43rem] relative md:-translate-y-44 md:translate-x-4 overflow-hidden"
-          initial={{ opacity: 0, scale: 1.05 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          className="w-full h-[16rem] sm:h-auto sm:w-[13rem] md:w-[20rem] md:h-[37rem] lg:w-[26rem] lg:h-[43rem] relative sm:-translate-y-0 md:-translate-y-44 md:translate-x-4 overflow-hidden"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
@@ -89,7 +98,7 @@ export const BuildingsCard = () => {
             src={buildingImage}
             alt="imagem-predio"
             fill
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
             className="transition-transform hover:scale-105"
           />
         </motion.div>

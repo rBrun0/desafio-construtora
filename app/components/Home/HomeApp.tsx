@@ -68,7 +68,7 @@ export const HomeApp = () => {
       <Header />
 
       <motion.main
-        className="flex flex-col items-center justify-center w-[29rem] sm:w-[29rem] md:w-[37rem] h-[9rem] mx-auto z-10 space-y-2"
+        className="flex flex-col items-center justify-center w-[90%] sm:w-[29rem] md:w-[37rem] h-auto mx-auto z-10 space-y-2 px-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -79,24 +79,24 @@ export const HomeApp = () => {
             width={164}
             height={133}
             alt="logo-site"
-            className="-translate-y-11 "
+            className="-translate-y-11 w-[100px] h-[80px] sm:w-[164px] sm:h-[133px]"
           />
         </motion.div>
         <motion.h1
-          className="text-white font-light text-3xl md:text-5xl text-center max-w-[95%]"
+          className="text-white font-light text-2xl sm:text-3xl md:text-5xl text-center max-w-[95%]"
           variants={fadeUp}
         >
           VIVA O <span className="bg-[#EDCF75] font-semibold">HOJE</span> COM
           SEGURANCA DO SEU PATRIMONIO
         </motion.h1>
         <motion.p
-          className="text-white text-xs md:text-base font-normal"
+          className="text-white text-[10px] sm:text-xs md:text-base font-normal text-center px-2"
           variants={fadeUp}
         >
           Apartamentos com 120 a 150m2 a 150m2 no Pereque, Porto Belo
         </motion.p>
         <motion.button
-          className="bg-transparent border-2 border-white rounded-xl text-white w-36 h-16"
+          className="bg-transparent border-2 border-white rounded-xl text-white w-28 h-12 sm:w-36 sm:h-16 text-sm sm:text-base"
           variants={scaleIn}
           whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
           whileTap={{ scale: 0.95 }}
