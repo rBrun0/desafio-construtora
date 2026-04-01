@@ -25,14 +25,14 @@ const detailVariants = {
 
 export const BuildingsCard = () => {
   return (
-    <div className="flex flex-col justify-center items-start space-y-12 sm:space-y-24 w-full">
+    <div className="flex flex-col justify-center items-center md:items-start space-y-6 md:space-y-24 w-full px-4 sm:px-0">
       <Image
         src={beachLogo}
         alt="beach-logo"
         className="hidden md:block w-[120px] h-[96px] lg:w-[165px] lg:h-[133px]"
       />
-      <div className="w-full sm:w-[32rem] md:w-[41rem] h-auto sm:h-[28rem] md:h-[34rem] bg-black flex flex-col sm:flex-row justify-between overflow-visible">
-        <div className="h-full text-white flex flex-col justify-center items-start pl-6 sm:pl-8 md:pl-12 space-y-6 sm:space-y-10 py-8 sm:py-0">
+      <div className="w-full max-w-[90vw] sm:max-w-none sm:w-[28rem] md:w-[41rem] bg-black flex flex-col sm:flex-row overflow-visible">
+        <div className="text-white flex flex-col justify-center items-start pl-6 sm:pl-8 md:pl-12 space-y-4 sm:space-y-6 md:space-y-10 py-6 sm:py-10">
           <motion.span
             className="text-sm sm:text-base md:text-xl"
             custom={0}
@@ -88,7 +88,7 @@ export const BuildingsCard = () => {
         </div>
 
         <motion.div
-          className="w-full h-[16rem] sm:h-auto sm:w-[13rem] md:w-[20rem] md:h-[37rem] lg:w-[26rem] lg:h-[43rem] relative sm:-translate-y-0 md:-translate-y-44 md:translate-x-4 overflow-hidden"
+          className="w-full h-[16rem] sm:w-[14rem] sm:h-[32rem] md:w-[20rem] md:h-[37rem] lg:w-[26rem] lg:h-[43rem] relative md:-translate-y-44 md:translate-x-4 overflow-hidden"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

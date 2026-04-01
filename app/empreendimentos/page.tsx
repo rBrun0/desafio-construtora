@@ -52,9 +52,9 @@ export default function empreendimentos() {
 
       {/* Pre Lancamento */}
 
-      <div className="relative">
+      <div className="relative pt-20 sm:pt-24 md:pt-0">
         <h1
-          className="absolute text-customGray font-bold text-5xl sm:text-7xl md:text-9xl opacity-5 left-4 sm:left-10 top-5 md:-top-12 "
+          className="absolute text-customGray font-bold text-5xl sm:text-7xl md:text-9xl opacity-5 left-4 sm:left-10 top-16 sm:top-20 md:-top-12 "
           style={{
             textShadow:
               "-2px -2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff, 2px 0 0 #fff",
@@ -63,7 +63,7 @@ export default function empreendimentos() {
           PRE <br /> LANCAMENTO
         </h1>
         <motion.h1
-          className="text-white text-3xl sm:text-4xl md:text-6xl font-bold mt-20 ml-4 sm:mt-24 sm:ml-10 md:mt-36 md:ml-36"
+          className="text-white text-3xl sm:text-4xl md:text-6xl font-bold mt-4 ml-4 sm:mt-8 sm:ml-10 md:mt-36 md:ml-36"
           variants={sectionTitleVariants}
           initial="hidden"
           whileInView="visible"
@@ -74,7 +74,7 @@ export default function empreendimentos() {
       </div>
 
       <motion.section
-        className="flex flex-col lg:flex-row justify-around items-center space-y-20 lg:space-y-0 mt-24 sm:mt-40 md:mt-52 lg:mt-72 bg-customGray px-4 sm:px-8 lg:px-0"
+        className="flex flex-col lg:flex-row justify-around items-center space-y-20 lg:space-y-0 mt-16 sm:mt-24 md:mt-52 lg:mt-72 bg-customGray px-4 sm:px-8 lg:px-0"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -117,9 +117,9 @@ export default function empreendimentos() {
 
       {/* Em Construcao */}
 
-      <div className="relative">
+      <div className="relative mt-16 sm:mt-20">
         <h1
-          className="absolute text-customGray font-bold text-5xl sm:text-7xl md:text-9xl opacity-5 left-4 sm:left-10 top-12 md:-top-12  "
+          className="absolute text-customGray font-bold text-5xl sm:text-7xl md:text-9xl opacity-5 left-4 sm:left-10 top-0 md:-top-12  "
           style={{
             textShadow:
               "-2px -2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff, 2px 0 0 #fff",
@@ -128,7 +128,7 @@ export default function empreendimentos() {
           EM <br /> CONSTRUCAO
         </h1>
         <motion.h1
-          className="text-white text-3xl sm:text-4xl md:text-6xl font-bold mt-20 ml-4 sm:mt-24 sm:ml-10 md:mt-36 md:ml-36"
+          className="text-white text-3xl sm:text-4xl md:text-6xl font-bold mt-4 ml-4 sm:mt-8 sm:ml-10 md:mt-36 md:ml-36"
           variants={sectionTitleVariants}
           initial="hidden"
           whileInView="visible"
@@ -139,7 +139,7 @@ export default function empreendimentos() {
       </div>
 
       <motion.section
-        className="flex flex-col md:flex-row justify-around items-center mt-24 sm:mt-40 md:mt-72 bg-customGray px-4 sm:px-8 md:px-0"
+        className="flex flex-col md:flex-row justify-around items-center space-y-20 md:space-y-0 mt-16 sm:mt-24 md:mt-72 bg-customGray px-4 sm:px-8 md:px-0"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
