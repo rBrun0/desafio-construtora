@@ -39,7 +39,7 @@ export const HomeApp = () => {
             {/* imagem utilizada para o fundo */}
             {/* <Image src={mainBeach}  alt="praia" className="-z-10 object-cover bg-center min-h-full translate-y md:-translate-y-[30%] lg:-translate-y-[50%] absolute"/> */}
 
-            <Image src={mainBeach} fill objectFit="cover" alt="fundo"/>
+            <Image src={mainBeach} fill objectFit="cover" alt="fundo" className=" brightness-75"/>
 
         </div>
     )

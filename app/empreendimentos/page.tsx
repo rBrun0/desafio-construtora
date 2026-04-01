@@ -47,12 +47,12 @@ export default function empreendimentos() {
              
         </section>
         <div className="bg-customGray w-full h-16 px-16 pt-24 flex justify-start items-center space-x-16">
-        <Image src={longLeftArrow} width={114} height={50} alt="seta-esquerda"/>
+        <Image src={longLeftArrow} width={114} height={50} alt="seta-esquerda" className=""/>
         <Image src={longRightArrow} width={114} height={50} alt="seta-esquerda"/>
         </div>
 
         <section className="w-full h-[32rem] flex flex-col items-center justify-center space-y-4 relative mt-32">
-            <Image src={officeImage} alt="imagem-fundo-escritorio" fill objectFit="cover" className="opacity-10"/>
+            <Image src={officeImage} alt="imagem-fundo-escritorio" fill objectFit="cover" className="opacity-10 "/>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white z-10 text-center">CONHECA NOSSAS <span className="text-mostard">OBRAS ENTREGUES</span></h1>
             <button className="bg-black hover:bg-zinc-800 text-white text-sm font-semibold tracking-widest rounded-3xl transition-colors

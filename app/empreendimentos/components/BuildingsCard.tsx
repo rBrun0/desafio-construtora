@@ -21,8 +21,10 @@ export const BuildingsCard = () => {
                 <span className='text-xl flex flex-col'> <FaLocationDot className=' w-10 h-10 text-mostard'/> Rua Manoel da <br /> Silva Pereira <br /> Pereque <br /> Porto Belo/SC</span>
             </div>
 
-            <div className='h-[18] w-[13rem] md:w-[20rem] md:h-[37rem] lg:w-[26rem] lg:h-[43rem] relative md:-translate-y-44 md:translate-x-4'>
-                <Image src={buildingImage} alt='imagem-predio' fill objectFit='cover'/>
+            <div className='h-[18] w-[13rem] md:w-[20rem] md:h-[37rem] lg:w-[26rem] lg:h-[43rem] relative md:-translate-y-44 md:translate-x-4 overflow-hidden'>
+                <Image src={buildingImage} alt='imagem-predio' fill objectFit='cover'
+                className='transition-transform hover:scale-105'
+                />
             </div>
         </div>
         </div>
